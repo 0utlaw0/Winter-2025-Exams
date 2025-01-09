@@ -4,10 +4,8 @@
 
 const duplicate = (value, times) => {
   if (times <= 0) return [];
-  const resultArray = [];
-    for (let i = 0; i < times; i++) {
-      resultArray[i] = value;
-    }
+  const resultArray = Array(times);
+  resultArray.fill(value, 0, times);
   return resultArray;
 };
 
