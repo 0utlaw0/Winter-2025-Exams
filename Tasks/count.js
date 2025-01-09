@@ -3,11 +3,9 @@
 'use strict';
 
 const count = (obj) => {
-  let sum = 0;
   const arrOfValues = Object.values(obj);
   const sortedArray = arrOfValues.filter((value) => typeof(value) === 'number');
-  sum = sortedArray.reduce((accumulator, current) => accumulator + current);
-  return sum;
+  return sortedArray.reduce((accumulator, current) => accumulator + current);
 };
 
 module.exports = count;
