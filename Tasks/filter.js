@@ -1,6 +1,6 @@
 // Refactor following solution
 // Filter array by type name
-"use strict";
+'use strict';
 
 const Filter = (array, type) => {
   const sortedArray = array.filter((value) => typeof value === type);
