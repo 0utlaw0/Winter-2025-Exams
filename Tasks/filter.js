@@ -2,15 +2,14 @@
 // Filter array by type name
 "use strict";
 
-const Filter = (value, type) => {
-  const remove = [];
-  for (const index in value) {
-    if (typeof value[index] !== type) {
-      remove.unshift(index);
+const Filter = (array, type) => {
+  const sortedArray = [];
+  for (const value of array) {
+    if (typeof value === type) {
+      sortedArray.push(value);
     }
   }
-  for (const key of remove) value.splice(key, 1);
-  return value;
+  return sortedArray;
 };
 
 module.exports = Filter;
