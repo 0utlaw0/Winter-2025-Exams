@@ -3,12 +3,7 @@
 "use strict";
 
 const Filter = (array, type) => {
-  const sortedArray = [];
-  for (const value of array) {
-    if (typeof value === type) {
-      sortedArray.push(value);
-    }
-  }
+  const sortedArray = array.filter((value) => typeof value === type);
   return sortedArray;
 };
 
