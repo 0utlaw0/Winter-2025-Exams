@@ -4,7 +4,8 @@
 
 const incNumbers = (obj) => {
   const copiedObject = {};
-  for (const keys in obj) {
+  const arrayOfKeys = Object.keys(obj);
+  for (const keys of arrayOfKeys) {
     copiedObject[keys] = typeof obj[keys] === 'number'? obj[keys] + 1 : obj[keys];
   }
   return copiedObject;
