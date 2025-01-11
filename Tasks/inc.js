@@ -5,11 +5,7 @@
 const incNumbers = (obj) => {
   const copiedObject = {};
   for (const keys in obj) {
-    if (typeof obj[keys] === 'number') {
-      copiedObject[keys] = obj[keys] + 1;
-    } else {
-      copiedObject[keys] = obj[keys];
-    }
+    copiedObject[keys] = typeof obj[keys] === 'number'? obj[keys] + 1 : obj[keys];
   }
   return copiedObject;
 };
