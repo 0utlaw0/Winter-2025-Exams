@@ -3,12 +3,14 @@
 'use strict';
 
 const incNumbers = (obj) => {
+  const copiedObject = {};
   for (const keys in obj) {
-    if ((typeof obj[keys]).charAt(0).toUpperCase() === 'N') {
-      obj[keys] = obj[keys] + 1;
+    if (typeof obj[keys] === 'number') {
+      copiedObject[keys] = obj[keys] + 1;
+    } else {
+      copiedObject[keys] = obj[keys];
     }
   }
-  return obj;
+  return copiedObject;
 };
-
 module.exports = incNumbers;
