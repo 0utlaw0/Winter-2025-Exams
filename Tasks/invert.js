@@ -3,10 +3,9 @@
 'use strict';
 
 const invert = (array) => {
-  const reversedArray = Object.keys(array);
-  const copiedArray = [ ...array ];
-  for (const keys of reversedArray)
-  reversedArray[keys] = copiedArray.pop()
+  const reversedArray = [];
+  for (let i = array.length - 1; i >= 0; i--)
+    reversedArray[i] = array[array.length - (i + 1)];
   return reversedArray;
 };
 
