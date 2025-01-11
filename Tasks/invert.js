@@ -3,7 +3,8 @@
 
 const invert = (array) => {
   const reversedArray = Object.keys(array);
-  reversedArray.forEach((i) => reversedArray[i] = array.pop());
+  const copiedArray = [ ...array ];
+  reversedArray.forEach((i) => reversedArray[i] = copiedArray.pop());
   return reversedArray;
 };
 
