@@ -5,10 +5,8 @@
 const copyOnly = (dict, ...toCopy) => {
   const resultObj = {};
   const arrayOfKeys = Object.keys(dict);
-  arrayOfKeys.forEach((value) => {
-    if (toCopy.includes(value)) resultObj[value] = dict[value];
-  });
+  for (const keys of arrayOfKeys)
+    if (toCopy.includes(keys)) resultObj[keys] = dict[keys];
   return resultObj;
 };
-
 module.exports = copyOnly;
