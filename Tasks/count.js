@@ -5,7 +5,6 @@
 const count = (obj) => {
   const arrOfValues = Object.values(obj);
   const sortedArray = arrOfValues.filter((value) => typeof value === 'number');
-  return sortedArray.reduce((accumulator, current) => accumulator + current);
+  return sortedArray.reduce((accumulator, current) => accumulator + current, 0);
 };
-
 module.exports = count;
